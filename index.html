@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beria Bunga — 16 Mei 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F7F2EC;
+    --cream2: #EFE8DE;
+    --rose: #C9A89A;
+    --rose-light: #E8D5CF;
+    --sage: #A8B5A2;
+    --sage-light: #D6DDD4;
+    --ink: #2A2420;
+    --ink-muted: #6B5E58;
+    --ink-faint: #9E928D;
+    --white: #FDFAF7;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(247, 242, 236, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rose-light);
+    padding: 0 1.5rem;
+    height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex; gap: 1.75rem; list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--rose); }
+
+  .nav-cta {
+    background: var(--ink) !important;
+    color: var(--white) !important;
+    padding: 6px 16px;
+    border-radius: 100px;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--rose) !important; color: var(--white) !important; }
+
+  .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
+  .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--ink); transition: 0.3s; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 6rem 1.5rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-deco {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.18;
+  }
+  .hero-deco-1 {
+    width: 420px; height: 420px;
+    background: var(--rose);
+    top: -80px; right: -100px;
+  }
+  .hero-deco-2 {
+    width: 280px; height: 280px;
+    background: var(--sage);
+    bottom: 60px; left: -80px;
+  }
+  .hero-deco-3 {
+    width: 160px; height: 160px;
+    background: var(--rose);
+    bottom: 120px; right: 10%;
+    opacity: 0.1;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--rose);
+    border: 1px solid var(--rose-light);
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.5rem, 10vw, 7rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--rose);
+  }
+
+  .hero-sub {
+    font-size: 0.88rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-sub span { margin: 0 0.6rem; color: var(--rose-light); }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 36px;
+    border-radius: 100px;
+    transition: background 0.25s, transform 0.15s;
+    border: none; cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--rose); transform: translateY(-1px); }
+
+  /* ── SECTION BASE ── */
+  section { padding: 5rem 1.5rem; }
+
+  .container { max-width: 880px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── TENTANG ── */
+  #tentang { background: var(--white); }
+
+  .tentang-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .tentang-text p {
+    color: var(--ink-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .cards-grid {
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+
+  .card-highlight {
+    background: var(--cream);
+    border: 1px solid var(--cream2);
+    border-radius: 14px;
+    padding: 1.25rem 1.5rem;
+    display: flex; align-items: flex-start; gap: 1rem;
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .card-highlight.visible { opacity: 1; transform: translateY(0); }
+
+  .card-icon {
+    width: 36px; height: 36px; flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--rose-light);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .card-icon svg { width: 16px; height: 16px; stroke: var(--rose); fill: none; stroke-width: 1.5; }
+
+  .card-highlight h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .card-highlight p { font-size: 0.82rem; color: var(--ink-muted); line-height: 1.5; }
+
+  /* ── DETAIL ── */
+  #detail { background: var(--cream); }
+
+  .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .detail-card {
+    background: var(--white);
+    border: 1px solid var(--cream2);
+    border-radius: 14px;
+    padding: 1.5rem;
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .detail-card.visible { opacity: 1; transform: translateY(0); }
+  .detail-card:nth-child(2) { transition-delay: 0.1s; }
+  .detail-card:nth-child(3) { transition-delay: 0.2s; }
+
+  .detail-card .d-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.5rem;
+  }
+  .detail-card .d-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  .btn-outline {
+    display: inline-block;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 100px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { background: var(--ink); color: var(--white); }
+
+  /* ── TIKET ── */
+  #tiket { background: var(--white); }
+
+  .tiket-card {
+    max-width: 380px;
+    background: var(--ink);
+    border-radius: 20px;
+    padding: 2.5rem;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  .tiket-card.visible { opacity: 1; transform: translateY(0); }
+
+  .tiket-deco {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--rose);
+    opacity: 0.15;
+    width: 200px; height: 200px;
+    top: -60px; right: -60px;
+  }
+
+  .tiket-badge {
+    display: inline-block;
+    background: var(--rose);
+    color: var(--white);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .tiket-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .tiket-price span {
+    font-size: 1.2rem;
+    vertical-align: super;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+  }
+
+  .tiket-note {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 2rem;
+  }
+
+  .tiket-divider {
+    height: 1px; background: rgba(255,255,255,0.12); margin-bottom: 1.5rem;
+  }
+
+  .tiket-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .tiket-features li {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.75);
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .tiket-features li::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--rose);
+    flex-shrink: 0;
+  }
+
+  /* ── BAYAR ── */
+  #bayar { background: var(--cream); }
+
+  .bayar-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .metode-card {
+    background: var(--white);
+    border: 1px solid var(--cream2);
+    border-radius: 14px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .metode-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.4rem;
+  }
+
+  .metode-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .metode-number {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--rose);
+    letter-spacing: 0.06em;
+  }
+
+  .steps { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+
+  .step {
+    display: flex; gap: 1rem; align-items: flex-start;
+  }
+
+  .step-num {
+    width: 28px; height: 28px; flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--rose-light);
+    color: var(--rose);
+    font-size: 0.78rem;
+    font-weight: 500;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .step p { font-size: 0.9rem; color: var(--ink-muted); line-height: 1.6; padding-top: 3px; }
+  .step p strong { color: var(--ink); }
+
+  .btn-wa {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #25D366;
+    color: white;
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 100px;
+    margin-top: 1.5rem;
+    transition: opacity 0.2s;
+  }
+  .btn-wa:hover { opacity: 0.88; }
+  .btn-wa svg { width: 16px; height: 16px; fill: white; }
+
+  /* ── FORMULIR ── */
+  #daftar { background: var(--white); }
+
+  .form-wrap {
+    max-width: 520px;
+  }
+
+  .form-group { margin-bottom: 1.25rem; }
+
+  .form-group label {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--cream);
+    border: 1px solid var(--cream2);
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus { border-color: var(--rose); }
+  .form-group input::placeholder { color: var(--ink-faint); }
+
+  .success-msg {
+    display: none;
+    background: var(--sage-light);
+    border: 1px solid var(--sage);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-top: 1.5rem;
+    color: var(--ink);
+  }
+
+  .success-msg h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .success-msg p { font-size: 0.88rem; color: var(--ink-muted); }
+
+  /* ── FOOTER ── */
+  #footer {
+    background: var(--ink);
+    color: var(--white);
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .footer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-sub {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--rose);
+    margin-bottom: 2rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+  }
+
+  /* ── FADE IN ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    width: 48px; height: 1px;
+    background: var(--rose-light);
+    margin: 1.5rem 0;
+  }
+
+  /* ── MOBILE NAV ── */
+  .mobile-menu {
+    display: none;
+    position: fixed; top: 56px; left: 0; right: 0; z-index: 99;
+    background: var(--cream);
+    border-bottom: 1px solid var(--rose-light);
+    padding: 1.25rem 1.5rem;
+    flex-direction: column; gap: 1rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    .tentang-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .detail-grid { grid-template-columns: 1fr; }
+    .bayar-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+    #hero { padding: 5rem 1.25rem 3rem; }
+    section { padding: 3.5rem 1.25rem; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title { font-size: 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Beria Bunga</a>
+  <ul class="nav-links">
+    <li><a href="#tentang">Tentang</a></li>
+    <li><a href="#detail">Detail</a></li>
+    <li><a href="#tiket">Tiket</a></li>
+    <li><a href="#bayar">Pembayaran</a></li>
+    <li><a href="#daftar" class="nav-cta">Daftar</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#tentang" onclick="toggleMenu()">Tentang</a>
+  <a href="#detail" onclick="toggleMenu()">Detail</a>
+  <a href="#tiket" onclick="toggleMenu()">Tiket</a>
+  <a href="#bayar" onclick="toggleMenu()">Pembayaran</a>
+  <a href="#daftar" onclick="toggleMenu()">Daftar Sekarang</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-deco hero-deco-1"></div>
+  <div class="hero-deco hero-deco-2"></div>
+  <div class="hero-deco hero-deco-3"></div>
+
+  <div class="hero-tag">Event Gathering & Pameran</div>
+  <h1 class="hero-title">Beria<br><em>Bunga</em></h1>
+  <p class="hero-sub">
+    16 Mei 2025
+    <span>·</span>
+    10.00–13.00 WIB
+    <span>·</span>
+    House of Noire
+  </p>
+  <a href="#daftar" class="btn-primary">Daftar Sekarang</a>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang">
+  <div class="container">
+    <div class="tentang-inner">
+      <div class="tentang-text fade-up">
+        <p class="section-label">Tentang Event</p>
+        <h2 class="section-title">Hadir dan<br>rasakan keindahannya</h2>
+        <div class="divider"></div>
+        <p>Beria Bunga adalah ruang hangat untuk kamu yang ingin merayakan keindahan dalam kesederhanaan. Temukan pameran bunga, workshop seru, dan sudut foto estetik yang sayang untuk dilewatkan. Cocok buat kamu yang butuh recharge dan inspirasi baru.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card-highlight">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 6 5 10c0 5 7 12 7 12s7-7 7-12c0-4-3-8-7-8z"/></svg>
+          </div>
+          <div>
+            <h3>Pameran Bunga</h3>
+            <p>Instalasi bunga segar yang cantik dan estetik — siap jadi latar foto terbaikmu.</p>
+          </div>
+        </div>
+        <div class="card-highlight">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <div>
+            <h3>Workshop</h3>
+            <p>Ikut sesi workshop menyenangkan — belajar merangkai bunga dari nol, santai dan seru.</p>
+          </div>
+        </div>
+        <div class="card-highlight">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
+          <div>
+            <h3>Photo Corner</h3>
+            <p>Sudut foto yang didesain khusus — dijamin feed-mu makin aesthetic setelahnya.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL -->
+<section id="detail">
+  <div class="container">
+    <p class="section-label fade-up">Detail Acara</p>
+    <h2 class="section-title fade-up">Catat tanggalnya,<br>jangan sampai ketinggalan</h2>
+    <div class="detail-grid">
+      <div class="detail-card">
+        <p class="d-label">Tanggal</p>
+        <p class="d-value">16 Mei<br>2025</p>
+      </div>
+      <div class="detail-card">
+        <p class="d-label">Waktu</p>
+        <p class="d-value">10.00 –<br>13.00 WIB</p>
+      </div>
+      <div class="detail-card">
+        <p class="d-label">Lokasi</p>
+        <p class="d-value">House of<br>Noire</p>
+      </div>
+    </div>
+    <a href="#" class="btn-outline">Lihat di Google Maps</a>
+    <!-- ⚠️ Ganti href="#" di atas dengan link Google Maps House of Noire -->
+  </div>
+</section>
+
+<!-- TIKET -->
+<section id="tiket">
+  <div class="container">
+    <p class="section-label fade-up">Harga Tiket</p>
+    <h2 class="section-title fade-up">Satu tiket,<br>semua pengalaman</h2>
+    <div class="tiket-card">
+      <div class="tiket-deco"></div>
+      <div class="tiket-badge">Reguler</div>
+      <p class="tiket-price"><span>Rp</span>40.000</p>
+      <p class="tiket-note">per orang · sudah termasuk akses semua area</p>
+      <div class="tiket-divider"></div>
+      <ul class="tiket-features">
+        <li>Akses pameran bunga</li>
+        <li>Workshop merangkai bunga</li>
+        <li>Sesi di photo corner</li>
+        <li>Berlaku sepanjang jam acara</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BAYAR -->
+<section id="bayar">
+  <div class="container">
+    <p class="section-label fade-up">Cara Bayar</p>
+    <h2 class="section-title fade-up">Transfer dulu,<br>tiket langsung diproses</h2>
+    <div class="bayar-grid">
+      <div class="fade-up">
+        <div class="metode-card">
+          <p class="metode-label">Metode Pembayaran</p>
+          <p class="metode-name">DANA</p>
+          <p class="metode-number">0821 2204 2939</p>
+        </div>
+        <p style="font-size:0.82rem; color:var(--ink-faint);">Nominal transfer: <strong style="color:var(--ink);">Rp 40.000</strong></p>
+
+        <a href="wa.me/[NOMOR_WA_PANITIA]" class="btn-wa" target="_blank">
+          <!-- ⚠️ Ganti [NOMOR_WA_PANITIA] dengan nomor WA panitia, contoh: wa.me/628123456789 -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Konfirmasi via WhatsApp
+        </a>
+      </div>
+      <div class="fade-up">
+        <p style="font-size:0.82rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:1rem;">Langkah Pemesanan</p>
+        <ol class="steps">
+          <li class="step">
+            <div class="step-num">1</div>
+            <p>Isi formulir pendaftaran di bagian bawah halaman ini</p>
+          </li>
+          <li class="step">
+            <div class="step-num">2</div>
+            <p>Transfer <strong>Rp 40.000</strong> ke DANA <strong>0821 2204 2939</strong></p>
+          </li>
+          <li class="step">
+            <div class="step-num">3</div>
+            <p>Kirim bukti transfer via WhatsApp ke nomor panitia</p>
+          </li>
+          <li class="step">
+            <div class="step-num">4</div>
+            <p>Tiket dikirim dalam <strong>1×24 jam</strong> setelah pembayaran dikonfirmasi</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAFTAR -->
+<section id="daftar">
+  <div class="container">
+    <p class="section-label fade-up">Formulir Pendaftaran</p>
+    <h2 class="section-title fade-up">Isi data kamu,<br>kita sisakan tempatnya</h2>
+    <div class="form-wrap fade-up">
+      <div class="form-group">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" placeholder="Contoh: Aulia Rahmadani" required>
+      </div>
+      <div class="form-group">
+        <label for="asal">Asal Sekolah / Kampus</label>
+        <input type="text" id="asal" placeholder="Contoh: SMA Negeri 3 Bandung / UPI" required>
+      </div>
+      <div class="form-group">
+        <label for="wa">Nomor WhatsApp</label>
+        <input type="tel" id="wa" placeholder="Contoh: 081234567890" required>
+      </div>
+      <button class="btn-primary" onclick="submitForm()" style="width:100%; text-align:center; margin-top:0.5rem;">Kirim Pendaftaran</button>
+
+      <div class="success-msg" id="successMsg">
+        <h4>Pendaftaran diterima!</h4>
+        <p>Terima kasih sudah daftar. Sekarang lanjut transfer ke DANA <strong>0821 2204 2939</strong> sebesar Rp 40.000, lalu konfirmasi via WhatsApp ya. Sampai jumpa di House of Noire!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <p class="footer-title">Beria Bunga</p>
+  <p class="footer-sub">16 Mei 2025 · House of Noire · 10.00–13.00 WIB</p>
+  <p class="footer-tagline">"Sampai jumpa di House of Noire!"</p>
+  <p class="footer-bottom">© Beria Bunga 2025 — All rights reserved</p>
+</footer>
+
+<script>
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    if (!e.target.closest('nav') && !e.target.closest('#mobileMenu')) {
+      menu.classList.remove('open');
+    }
+  });
+
+  // Scroll fade-in
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up, .card-highlight, .detail-card, .tiket-card').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Stagger cards
+  document.querySelectorAll('.card-highlight').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.12) + 's';
+  });
+
+  // Form submit
+  function submitForm() {
+    const nama = document.getElementById('nama').value.trim();
+    const asal = document.getElementById('asal').value.trim();
+    const wa = document.getElementById('wa').value.trim();
+
+    if (!nama || !asal || !wa) {
+      alert('Mohon isi semua kolom terlebih dahulu ya!');
+      return;
+    }
+
+    const msg = document.getElementById('successMsg');
+    msg.style.display = 'block';
+    msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+    document.getElementById('nama').value = '';
+    document.getElementById('asal').value = '';
+    document.getElementById('wa').value = '';
+  }
+</script>
+</body>
+</html>
